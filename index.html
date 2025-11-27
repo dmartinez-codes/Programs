@@ -62,6 +62,12 @@
 <button onclick="Subtract()">Subtract</button>
 <p>Result: <span id="sresult"></span></p>
 
+<h3>Remainder</h3>
+<input type="number" id="rnum1" placeholder="Enter the First number">
+<input type="number" id="rnum2" placeholder="Enter the second number">
+<button onclick="Remainder()">Remainder</button>
+<p>Result: <span id="rresult"></span></p>
+
 <script>
     function calculateSum() {
 	    let num1 =
@@ -106,7 +112,19 @@ parseFloat(document.getElementById('snum2').value);
 		
 		document.getElementById('sresult').textContent = subtract;
 	}
+	
+	function Remainder() {
+	    let rnum1 =
+parseFloat(document.getElementById('rnum1').value);
+        let rnum2 =
+parseFloat(document.getElementById('rnum2').value);
+
+        let Remainder = snum1 % snum2;
+		
+		document.getElementById('rresult').textContent = Remainder;
+	}
 	</script> 
 </body>
 </html>
+
 
